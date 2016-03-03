@@ -24,23 +24,27 @@ body {
   background-size: cover;
   background-image: url("../img/cover.jpg");
   max-width: 100%;
+  margin-bottom: 10px;
 }
 
-// .cook1 {
-//   display: flex;
-//   justify-content: center;
-//   align-items: flex-start;
-//   width: 150px;
-//   height: 150px;
-//   background-size: cover;
-//   background-image: url("../img/cook1.jpg");
-// }
+//Animation to the larch logo //
+.photo img {
+  &:hover {
+      -webkit-animation: rock-logo 3s ease-in-out infinite;
+  }
+}
 
+// keyframe //
+@-webkit-keyframes rock-logo {
+  50% { transform: scale(1.50, 1.0) translateY(-10px); }
+}
+
+//Animation for the 4th photo //
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 //photo gallery//
 .cook img {
-  max-width: 94%;
-
-  margin: 10px;
+  max-width: 96%;
+  margin-left: 10px;
 }
 
 
@@ -49,7 +53,7 @@ body {
   flex-direction: row;
 }
 // First photo in the gallery //
-.cook1, .cook3 {
+.cook1, .cook3, .cook4 {
   position: relative;
 }
 
@@ -87,21 +91,46 @@ body {
       transition: all 1s;
     }
   }
-}//Animation//
-.photo img {
-  // margin-top: 20px;
-  &:hover {
+}
 
-    -webkit-animation: rock-logo 3s ease-in-out infinite;
+.cook4 {
+  // height: 300px;
+  // width: 320px;
+  overflow: hidden;
+   &img {
+    // width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+  .cook-info {
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    top: 335px;
+    height: 350px;
+    width: 100%;
+    color: #fff;
+    background-color: #2780E3;
+    opacity: 0.9;
+    transition: transform 0.75s;
+    &:hover {
+       transform: translateY(-335px);
+    }
+    .details-title {
+      height: 45px;
+      font-size: 20px;
+      // padding: 10px;
+      small {
+        font-size: 70%;
+        color: #f7f7f7;
+      }
+    }
+    .details-body {
+      // padding: 10px;
+      text-align: center;
+    }
   }
 }
-
-// keyframe //
-@-webkit-keyframes rock-logo {
-  50% { transform: scale(1.50, 1.0) translateY(-10px); }
-}
-
-
 
 //Animation simpler way//
 // img {
