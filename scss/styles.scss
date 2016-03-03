@@ -48,27 +48,46 @@ body {
   display: flex;
   flex-direction: row;
 }
-
-.cook1 {
+// First photo in the gallery //
+.cook1, .cook3 {
   position: relative;
 }
 
-.raft img {
+.raft img, .raft2 img {
     position: absolute;
     left: 35%;
     top: 25%;
     width: 20%;
     height: auto;
     z-index: 1;
+    border-radius: 50%;
+    background: transparentize(black, 0.8);
+}
 
+  .raft img {
     &:hover {
-      transform: scale(1.50, 1.0);
+      transform: scale(1.50, 1.50);
       transition: all 1s;
     }
 }
 
+// Second photo in the gallery //
+.cook2 {
+  &:hover {
+    transform: scale(1.50, 1.50);
+    transition: all 1s;
+  }
+}
 
-//Animation//
+// Third photo in the gallery //
+.cook3 {
+  &:hover {
+    .raft2 img {
+      transform: scale(1.50, 1.50);
+      transition: all 1s;
+    }
+  }
+}//Animation//
 .photo img {
   // margin-top: 20px;
   &:hover {
