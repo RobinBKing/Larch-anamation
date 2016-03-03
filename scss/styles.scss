@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+}
+
+//header photo //
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-image: url("../img/cover.jpg");
+  max-width: 100%;
+}
+
+// .cook1 {
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-start;
+//   width: 150px;
+//   height: 150px;
+//   background-size: cover;
+//   background-image: url("../img/cook1.jpg");
+// }
+
+//photo gallery//
+.cook img {
+  max-width: 94%;
+
+  margin: 10px;
+}
+
+
+.photo-gallery {
+  display: flex;
+  flex-direction: row;
+}
+
+.cook1 {
+  position: relative;
+}
+
+.raft img {
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    width: 20%;
+    height: auto;
+    z-index: 1;
+
+    &:hover {
+      transform: scale(1.50, 1.0);
+      transition: all 1s;
+    }
+}
+
+
+//Animation//
+.photo img {
+  // margin-top: 20px;
+  &:hover {
+
+    -webkit-animation: rock-logo 3s ease-in-out infinite;
+  }
+}
+
+// keyframe //
+@-webkit-keyframes rock-logo {
+  50% { transform: scale(1.50, 1.0) translateY(-10px); }
+}
+
+
+
+//Animation simpler way//
+// img {
+//   &:hover {
+//     transform: scale(1.50, 1.0);
+//     transition: all 2s;
+//   }
+// }
+//end simpler animation//
